@@ -2,13 +2,13 @@
 
 const store = require('../store')
 const successMessage = function (newText) {
-  $('#message').text('signed up successfully!')
+  $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 
 const failureMessage = function (newText) {
-  $('#message').text('newText')
+  $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
@@ -20,7 +20,7 @@ const onSignUpSuccess = function () {
 const onSignUpFailure = function () {
   failureMessage('Sign up failed')
 }
-
+// contains user object
 const onSignInSuccess = function (responseData) {
   successMessage('signed in successfully!')
   console.log('responseData is', responseData)
