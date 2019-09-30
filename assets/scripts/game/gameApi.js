@@ -8,8 +8,7 @@ const newGame = function () {
     method: 'POST',
     headers: {
       Authorization: `Token token=${store.user.token}`
-    },
-    data: '{}'
+    }
   })
 }
 
@@ -34,10 +33,10 @@ const updateGame = function (index, value, over) {
     data: {
       game: {
         cell: {
-          index: index,
-          value: value
+          index: store.position,
+          value: store.player
         },
-        over: over
+        over: false
       }
     }
   })
