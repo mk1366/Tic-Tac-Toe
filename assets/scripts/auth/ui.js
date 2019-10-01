@@ -24,7 +24,11 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('signed in successfully!')
   console.log('responseData is', responseData)
-
+  $('.game').show()
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
   // save the 'user' we got from the API inside of 'store'
   // so we can use it later, from any file
   store.user = responseData.user
@@ -44,6 +48,11 @@ const onchangepasswordFailure = function () {
 }
 const onSignoutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('.game').hide()
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#sign-up').show()
+  $('#sign-in').show()
 }
 
 const onSignoutFailure = function () {
