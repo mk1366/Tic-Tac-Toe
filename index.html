@@ -2,31 +2,69 @@
 <html lang="en">
 
 <html>
-    <head>
-      <title>Tic Tac Toe </title>
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic Tac Toe </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic Tac Toe</h1>
-      <div class="row">
-          <div id="0" class="col-4 col-md-4 col-lg-4 box alt-color">0</div>
-          <div id="1" class="col-4 col-md-4 col-lg-4 box alt-color">1</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">2</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">3</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">4</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">5</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">6</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">7</div>
-          <div class="col-4 col-md-4 col-lg-4 box alt-color">8</div>
-      </div>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-    </body>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <h3 id="message"></h3>
+
+<div class='game' id="board">
+  <div class="row">
+    <div id="0" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="0">0</div>
+    <div id="1" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="1">1</div>
+    <div id="2" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="2">2</div>
+    <div id="3" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="3">3</div>
+    <div id="4" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="4">4</div>
+    <div id="5" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="5">5</div>
+    <div id="6" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="6">6</div>
+    <div id="7" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="7">7</div>
+    <div id="8" class="col-4 col-md-4 col-lg-4 square alt-color" data-box="8">8</div>
+  </div>
+</div>
+
+
+  <form id='sign-up'>
+    <h2>sign-up</h2>
+    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
+    <button type="submit">sign up</button>
+  </form>
+
+
+  <form id='sign-in'>
+    <h2>Sign-in</h2>
+    <input type="email" name="credentials[email]"placeholder='Enter email..'>
+    <input type="password" name="credentials[password]"placeholder='password'>
+    <button>sign in</button>
+  </form>
+
+
+    <form id='change-password'>
+      <h2>change password</h2>
+      <input type="password" name="passwords[old]" placeholder='Enter old password'>
+      <input type="password" name="passwords[new]" placeholder='Enter new password'>
+      <input type="submit" class="btn btn-info" value="Submit">
+    </form>
+
+      <form id='sign-out'>
+        <h3>Sign-out</h3>
+        <button class = "btn btn-primary" >sign-out</button>
+      </form>
+
+    <button class='game' id="play">play</button>
+
+  <footer>developed by Mahelet</footer>
+</body>
+
 </html>
