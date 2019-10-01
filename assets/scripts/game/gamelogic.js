@@ -20,7 +20,6 @@ const checkIfEmpty = function (box) {
   } else {
     console.log('the id of the box', $(box).attr('id'))
     store.position = $(box).attr('id')
-    // adding x or o to the html
     $(box).html(store.player)
     gameBoard[store.position] = store.player
     api.updateGame()

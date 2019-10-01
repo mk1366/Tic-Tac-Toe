@@ -11,32 +11,22 @@ body {
   margin-top: 10px;
 }
 
-  .board {
+  #board {
     display: flex;
-    height: 70vmin;
-    margin: auto;
-    width: 70vmin;
-    flex-direction: row;
-    felx-wrap: wrap;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 300px;
     justify-content: flex-start;
-    //
+
 
   }
 .square {
-  display: inline-block;
-  height: 70px;
-  width: 70px;
-    border: 5px solid-box;
-    text-align: center;
-    box-sizining: border-box;
+  width: 200px;
     border: 5px solid white;
-    // align-item: center;
-    //border-right: 2px solid;
-    //border-top: 2px solid-box
-    //cursor: ponter;
-
-
-  }
+    text-align: center;
+    box-sizing: border-box;
+}
 
 .square:hover {
   background-color: #80cd92;
@@ -44,21 +34,15 @@ body {
   }
 
 button {
-  padding: 20px;
-  font-size: 30px;
-  margin-top: 10px;
+  background-color: #696969;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 40px;
+  display: inline-block;
+
 }
   .footer {
+    padding-top: 100px;
+    margin-top: 40px;
 
 }
-
-//@keyframe animination name {
-//   from {
-//     backgorund color: red, auto;
-//     to
-//     background color: blue, auto;
-//   }
-//}
-
-//cell {
-//animaniation: animinationname 2s,
