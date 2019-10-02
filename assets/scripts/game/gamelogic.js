@@ -6,7 +6,7 @@ let gameOver = false
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 const switchPlayer = function () {
   if (store.player === 'x') {
-    store.player = 'y'
+    store.player = 'O'
     console.log(store)
   } else {
     store.player = 'x'
@@ -15,7 +15,7 @@ const switchPlayer = function () {
 }
 
 const checkIfEmpty = function (box) {
-  if (($(box).html() === 'x') || ($(box).html() === 'y') || gameOver === true) {
+  if (($(box).html() === 'x') || ($(box).html() === 'Os') || gameOver === true) {
     $('#message').text('invalid move')
   } else {
     console.log('the id of the box', $(box).attr('id'))

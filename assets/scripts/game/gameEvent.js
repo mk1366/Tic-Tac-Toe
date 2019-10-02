@@ -14,6 +14,13 @@ const storeGame = function (data) {
   console.log(store.game.id)
 }
 
+const reset = function (newGame) {
+  $('.square').trigger('reset')
+  store.player = 'X'
+  gameApi.updateGame()
+  then(storeGame)
+}
+
 module.exports = {
   startGame
 
