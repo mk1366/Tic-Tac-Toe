@@ -15,10 +15,12 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('signed up successfully!')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function () {
   failureMessage('Sign up failed')
+  $('#sign-up').trigger('reset')
 }
 // contains user object
 const onSignInSuccess = function (responseData) {
@@ -33,21 +35,26 @@ const onSignInSuccess = function (responseData) {
   // so we can use it later, from any file
   store.user = responseData.user
   console.log('store is', store)
+  $('#sign-in').trigger('reset')
 }
 
 const onSignInFailure = function () {
   failureMessage('Sign in failed')
+  $('#sign-in').trigger('reset')
 }
 
 const onchangepasswordSuccess = function () {
   successMessage('Changepassword successfully!')
+  $('#change-password').trigger('reset')
 }
 
 const onchangepasswordFailure = function () {
   failureMessage('Changepassword failed')
+  $('#change-password').trigger('reset')
 }
 const onSignoutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('#Signed out').trigger('reset')
   $('.game').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
@@ -57,6 +64,7 @@ const onSignoutSuccess = function () {
 
 const onSignoutFailure = function () {
   failureMessage('Sign out failed')
+$('#sign-out').trigger('reset')
 }
 module.exports = {
   onSignUpSuccess,

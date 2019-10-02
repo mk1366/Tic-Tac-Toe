@@ -1,59 +1,41 @@
-jQuery
+# Application Title: A Description
 
-// longhand syntax
-jQuery('p')
+This application allows the user to do x, y, and z. Maybe here's a reason why I wanted to do this project, or
+came up with this idea.
 
-// shorthand syntax
-$('p')
+## Important Links
 
-// use modern CSS selectors
-$('.my-targeted-class')
-$('#my-targeted-id')
-$('.my-parent-class .my-child-class')
+- [Other Repo](www.link.com)
+- [Deployed Client](www.link.com)
 
-const myBoxElement = $('.box')
+## Planning Story
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna. Curabitur leo arcu, elementum in posuere vitae, rutrum eu urna. Quisque tincidunt nulla sed mi cursus, nec tristique est fermentum. Etiam lacinia id neque ut egestas. Sed consequat convallis felis nec posuere. Sed non eros sed velit viverra tincidunt. Etiam et tortor sit amet lacus volutpat dignissim. Vestibulum convallis, felis a posuere pretium, turpis enim sollicitudin neque, pretium finibus leo metus sed sapien. Praesent iaculis pharetra nunc ac rhoncus. Duis eu risus in est porttitor egestas sit amet eget metus. Maecenas iaculis auctor ullamcorper. Donec pretium dolor non nisl egestas bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper pulvinar orci interdum mattis. Ut gravida volutpat mauris, a semper risus maximus ut.
 
-Avoid the most expensive methods like
-.append and
-.prepend.
-Instead, create all of your html in a string and use .html to attach it to the page all at once.
+### User Stories
 
-const PLAYER_TOKEN = 'X'
-Const COMPUTER_TOKEN = 'Y'
+- As a user I want to sign in/up
+- As a user I want to Create a new < resource >
+- As a user I want to Read multiple < resources >
+- As a user I want to Read a single < resource >
+- As a user I want to Update a < resource > I own
+- As a user I want to Delete a < resource > I own
 
-$(document).ready(function() {
-  const grid = [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' ']
-  ];
+### Technologies Used
 
-  function isGameOver() {
-    // check ig game is over
-    for (let i = 0; i<3; i++) {
-      if
-      return
+- jQuery
+- HTML/CSS
+- Bootstrap
+- Javascript
 
-    } else if
+### Unsolved Problems
 
-  }
+- Still need to ....
+- Would like to eventually ....
 
+## Images
 
+---
 
-$('.col').click(function() {
-  $this = $(this);
-  $(this).html(PLAYER_TOKEN);
-  const A = $this.data('A')
-  const B = $this.data('B')
-  grid[A][B] = PLAYER_TOKEN;
-
-  if (isGameOver()) {
-    else {
-
-    }
-  }
-
-
-  });
-});
+#### Wireframe:
+![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)

@@ -3,7 +3,24 @@ const api = require('./gameApi.js')
 const ui = require('./gameUi.js')
 const store = require('../store')
 let gameOver = false
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+let gameBoard = ['', '', '', '', '', '', '', '', '']
+
+const startGame = function () {
+  $('.square').text('')
+  store.player = 'x'
+  gameBoard = ['', '', '', '', '', '', '', '', '']
+  gameOver = false
+  console.log('start game')
+  api.newGame()
+    .then(storeGame)
+}
+
+const storeGame = function (data) {
+  store.game = data.game
+  console.log(store)
+  console.log(store.game.id)
+}
+
 const switchPlayer = function () {
   if (store.player === 'x') {
     store.player = 'O'
@@ -25,10 +42,6 @@ const checkIfEmpty = function (box) {
     api.updateGame()
       .then(storeGame)
   }
-}
-
-const storeGame = function (data) {
-  console.log()
 }
 
 const checkWin = function () {
@@ -70,5 +83,6 @@ const playGame = function (event) {
 }
 
 module.exports = {
-  playGame
+  playGame,
+  startGame
 }
