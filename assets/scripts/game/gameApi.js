@@ -2,6 +2,9 @@
 const config = require('../config')
 const store = require('../store')
 
+// declared a varible 'newgame' with a functin expression
+// that performs asynchronous HTTP request using Api url and post it to our page.
+// user token to the new game functionality.
 const newGame = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
@@ -23,6 +26,9 @@ const getGames = function () {
   })
 }
 
+// function that takes threee arguments, an array with
+// index(to hold the place of each element) and the
+// the value that the players get X or 0.
 const updateGame = function (index, value, over) {
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
