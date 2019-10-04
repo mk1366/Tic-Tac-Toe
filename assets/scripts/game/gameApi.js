@@ -47,7 +47,9 @@ const updateGame = function (index, value, over) {
     }
   })
 }
-
+// The default value is false, before the game start.
+// this is the default export of all the declared
+// variables with their properties, methods, and settings.
 module.exports = {
   newGame,
   getGames,

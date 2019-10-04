@@ -32,7 +32,7 @@ const switchPlayer = function () {
 }
 
 const checkIfEmpty = function (box) {
-  if (($(box).html() === 'x') || ($(box).html() === 'Os') || gameOver === true) {
+  if (($(box).html() === 'x') || ($(box).html() === 'O') || gameOver === true) {
     $('#message').text('invalid move')
   } else {
     console.log('the id of the box', $(box).attr('id'))
@@ -48,6 +48,7 @@ const checkWin = function () {
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
     $('#message').text('WINNER is ' + gameBoard[0])
     gameOver = true
+  //  if (gameOver = true){$('#message').trigger('reset')} whenver the game is over in any sequance, the message should be reset.
   } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) {
     $('#message').text('WINNER is ' + gameBoard[3])
     gameOver = true
@@ -71,6 +72,8 @@ const checkWin = function () {
     gameOver = true
   }
 }
+
+// playGame is declared as a function expression, with methods and functonality.
 
 const playGame = function (event) {
   // console.log(event.target)
