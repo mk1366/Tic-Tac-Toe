@@ -1,6 +1,6 @@
 'user strict'
 const api = require('./gameApi.js')
-const ui = require('./gameUi.js')
+// const ui = require('./gameUi.js')
 const store = require('../store')
 let gameOver = false
 let gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -31,16 +31,29 @@ const switchPlayer = function () {
   }
 }
 
+const gamePlayed = function () {
+  api.getGames()
+    .then(games)
+}
+const games = function (gamedata) {
+  console.log(gamedata)
+  console.log(gamedata.games.length)
+  $('#message').text('User played ' + (gamedata.games.length) + ' games!')
+}
+
 const checkIfEmpty = function (box) {
-  if (($(box).html() === 'x') || ($(box).html() === 'Os') || gameOver === true) {
+  if (($(box).html() === 'x') || ($(box).html() === 'O') || gameOver === true) {
     $('#message').text('invalid move')
   } else {
     console.log('the id of the box', $(box).attr('id'))
     store.position = $(box).attr('id')
     $(box).html(store.player)
     gameBoard[store.position] = store.player
-    api.updateGame()
+    checkWin()
+
+    api.updateGame(gameOver)
       .then(storeGame)
+      .then(() => switchPlayer())
   }
 }
 
@@ -69,6 +82,9 @@ const checkWin = function () {
   } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6]) {
     $('#message').text('WINNER is ' + gameBoard[2])
     gameOver = true
+  } else if (gameBoard.every(box => box !== '')) {
+    $('#message').text('Is a Tie!')
+    gameOver = true
   }
 }
 
@@ -77,12 +93,13 @@ const playGame = function (event) {
   // console.log(event.target.dataset.box)
   const box = event.target
   checkIfEmpty(box)
-  switchPlayer()
+
   // $(box).html(player)
-  checkWin()
 }
 
 module.exports = {
   playGame,
-  startGame
+  startGame,
+  gamePlayed,
+  games
 }

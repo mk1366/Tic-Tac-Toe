@@ -29,7 +29,7 @@ const getGames = function () {
 // function that takes threee arguments, an array with
 // index(to hold the place of each element) and the
 // the value that the players get X or 0.
-const updateGame = function (index, value, over) {
+const updateGame = function (over) {
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',
@@ -42,14 +42,12 @@ const updateGame = function (index, value, over) {
           index: store.position,
           value: store.player
         },
-        over: false
+        over: over
       }
     }
   })
 }
-// The default value is false, before the game start.
-// this is the default export of all the declared
-// variables with their properties, methods, and settings.
+
 module.exports = {
   newGame,
   getGames,
