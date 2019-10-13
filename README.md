@@ -37,7 +37,7 @@ User Stories:
 •	As a user, I want to be able create an account
 •	As a user, I want to keep my overalls win scores.
 •	As a user, I want X and O to switch on every click
-•	As a user, I want to some user message for win and tie function.
+•	As a user, I want to add user message for win and tie function.
 
 Wireframe:
 
