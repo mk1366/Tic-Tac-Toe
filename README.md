@@ -1,43 +1,44 @@
-# Application Title: A Description
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I wanted to do this project, or
-came up with this idea.
+Tic-Tac-Toe:
 
-## Important Links
+A simple game that allows user to create an account and play multiple rounds of the tic-tac-toe.
 
-- [Other Repo](www.link.com)
-- [Deployed Client](www.link.com)
+Technologies Used:
 
-## Planning Story
+•	JavaScript
+•	HTML5
+•	AJAX
+•	JQUERY
+•	Bootstrap
+•	SASS
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna. Curabitur leo arcu, elementum in posuere vitae, rutrum eu urna. Quisque tincidunt nulla sed mi cursus, nec tristique est fermentum. Etiam lacinia id neque ut egestas. Sed consequat convallis felis nec posuere. Sed non eros sed velit viverra tincidunt. Etiam et tortor sit amet lacus volutpat dignissim. Vestibulum convallis, felis a posuere pretium, turpis enim sollicitudin neque, pretium finibus leo metus sed sapien. Praesent iaculis pharetra nunc ac rhoncus. Duis eu risus in est porttitor egestas sit amet eget metus. Maecenas iaculis auctor ullamcorper. Donec pretium dolor non nisl egestas bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper pulvinar orci interdum mattis. Ut gravida volutpat mauris, a semper risus maximus ut.
+Planning and Development process:
 
-### User Stories
+•	As a process of my game development, I first draw a wireframe to layout the structure, and content of the game which include sign-up, sign-in, change-password and game-board.
+•	Separate, the html, CSS, and JavaScript in different files and then link them properly.
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+•	Built the user authentication for sign-up, sign-in and change-password.
 
-### Technologies Used
+•	Using the API: https://tic-tac-toe-wdi.herokuapp.com/' asynchronous (AJAX) call, JavaScript, and jQuery for event handling.
 
-- jQuery
-- HTML/CSS
-- Bootstrap
-- Javascript
+•	The game has been tested on web browser chrome and Safari but has not being tested on other devices. When the user wins, loses or gets a tie it sends parameters through AJAX so that the app hosting its web view can determine how the player did.
 
-### Unsolved Problems
+Unsolved Problems
+•	Add functionality that will allow the user to store the scores.
+•	 Implement additional CSS to make the game layout attractive
+•	Add sound effect
 
-- Still need to ....
-- Would like to eventually ....
+Important Links:
 
-## Images
+Deployed client:  https://mk1366.github.io/Tic-Tac-Toe/
 
----
+User Stories:
 
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+•	As a user, I want to be able create an account
+•	As a user, I want to keep my overalls win scores.
+•	As a user, I want X and O to switch on every click
+•	As a user, I want to some user message for win and tie function.
 
-This is my readme.
+Wireframe:
+
+•	https://imgur.com/3jOFbYO
