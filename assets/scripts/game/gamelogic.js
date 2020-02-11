@@ -5,7 +5,7 @@ const store = require('../store')
 let gameOver = false
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
-const startGame = function() {
+const startGame = function () {
   $('.square').text('')
   store.player = 'x'
   gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -15,13 +15,13 @@ const startGame = function() {
     .then(storeGame)
 }
 
-const storeGame = function(data) {
+const storeGame = function (data) {
   store.game = data.game
   console.log(store)
   console.log(store.game.id)
 }
 
-const switchPlayer = function() {
+const switchPlayer = function () {
   if (store.player === 'x') {
     store.player = 'O'
     console.log(store)
@@ -31,17 +31,17 @@ const switchPlayer = function() {
   }
 }
 
-const gamePlayed = function() {
+const gamePlayed = function () {
   api.getGames()
     .then(games)
 }
-const games = function(gamedata) {
+const games = function (gamedata) {
   console.log(gamedata)
   console.log(gamedata.games.length)
   $('#message').text('User played ' + (gamedata.games.length) + ' games!')
 }
 
-const checkIfEmpty = function(box) {
+const checkIfEmpty = function (box) {
   if (($(box).html() === 'x') || ($(box).html() === 'O') || gameOver === true) {
     $('#message').text('invalid move')
   } else {
@@ -57,7 +57,7 @@ const checkIfEmpty = function(box) {
   }
 }
 
-const checkWin = function() {
+const checkWin = function () {
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
     $('#message').text('WINNER is ' + gameBoard[0])
     gameOver = true
@@ -88,7 +88,7 @@ const checkWin = function() {
   }
 }
 
-const playGame = function(event) {
+const playGame = function (event) {
   // console.log(event.target)
   // console.log(event.target.dataset.box)
   const box = event.target

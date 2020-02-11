@@ -1,39 +1,37 @@
- @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand&display=swap');
  //@import '~animate.css/animate.main.css';
 
 h1 {
   text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 4.5rem;
 }
 
 body {
-  background-color: DarkSlateGrey;
+  // background-color: DarkSlateGrey;
   margin: none;
-  margin-top: 10px;
+  padding: 40px;
+  height: 100vh;
+  background-image: url('public/YELLOW.jpeg');
+  background-size: 100% 100%;
 }
 
 #board {
-	width: 600px;
-	height: 600px;
-	margin: 0 auto;
-  background-color: #34495e;
-  color: #fff;
-  border: 6px solid #2c3e50;
-  border-radius: 10px;
-
-	display: grid;
-	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-
+  display: flex;
+  height: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 300px;
+  justify-content: flex-start;
 }
 
 .square {
-  border: 6px solid #2c3e50;
-  border-radius: 2px;
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200px;
+  border: 5px solid white;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .square:hover {
@@ -45,12 +43,53 @@ button {
   background-color: #696969;
   padding: 5px;
   font-size: 16px;
-  margin-top: 40px;
   display: inline-block;
 
 }
-
 .footer {
-  padding-top: 500px;
-  margin-top: 600px;
+  height: 5vh;
+
+}
+
+p {
+  text-align: center;
+  font-weight: bolder;
+  color: #638fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px #000;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+  &.game-btn {
+    display: grid;
+    text-align: center;
+  }
+}
+
+.gamePlayed {
+  text-align: right;
+}
+
+.auth {
+  display: block;
+  text-align: center;
+  padding: 35px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 2.5px;
+  font-family: 'Neucha', cursive;
+}
+
+.container {
+  min-height: 85vh;
+  padding-top: 5vh;
+  background-color:#fff6db;
+  border: 25px ridge #fff;
+  box-shadow: 0px 9px 35px 2px rgba(25,25,25,0.8);
 }
